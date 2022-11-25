@@ -1,0 +1,27 @@
+.sell_form {
+    margin-top: 80px;
+}
+
+.title_form {
+    text-align: center;
+}
+
+.form {
+    margin-left: 15rem;
+    margin-right: 15rem;
+    margin-top: 1.5rem;
+    padding: 2rem;
+}
+
+.form label {
+    font-weight: 700;
+    font-size: large;
+}
+
+.form input {
+    border: 1px solid rgba(186, 186, 186, 0.696);
+    height: 2rem;
+    padding: 1rem;
+    margin-left: 1rem;
+    width: 20rem;
+}

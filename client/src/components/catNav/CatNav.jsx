@@ -16,7 +16,7 @@ const CatNav = () => {
           <Link className="linkk" to="">
             <p>Books</p>
           </Link>
-          <Link className="linkk" to="">
+          <Link className="linkk" to="/sell">
             <p style={{ fontWeight: "bolder", fontSize: "16px" }}>
               Sell Your Products
             </p>

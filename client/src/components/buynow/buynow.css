@@ -8,13 +8,13 @@
 
 .buynow_section .buynow_container {
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 30px 20px;
     display: flex;
     /* justify-content: space-around; */
 }
 
 .buynow_container .left_buy {
-    flex: .7;
+    flex: .6;
     background-color: #fff;
     padding: 10px 20px;
     border-radius: 2px;
@@ -114,14 +114,10 @@
 
 /* right buy now */
 .buynow_container .right_buy {
-    flex: .2;
-    margin-right: -50px;
+    flex: .3;
+    margin-right: -120px;
     padding: 0 20px;
     border-radius: 2px;
-}
-
-.buynow_container .right_buy img {
-    width: 300px;
 }
 
 .buynow_container .right_buy .cost_right {
@@ -133,7 +129,7 @@
 
 .buynow_container .right_buy .cost_right p {
     color: #007185;
-    font-size: 12px;
+    font-size: 17px;
     font-weight: 500;
     margin-top: 20px;
 }
@@ -143,14 +139,14 @@
     margin-top: 20px;
 }
 
-.cost_right .rightbuy_btn {
-    width: 100%;
+.leftbuy_btn {
+    width: 40%;
     margin-top: 15px;
     padding: 8px 0;
     border-radius: 8px;
     border: none;
     outline: none;
-    background-color: #FFD814;
+    background-color: #5eff14;
     font-size: 14px;
     cursor: pointer;
     box-shadow: 0 0 10px -5px rgba(0, 0, 0, .5);

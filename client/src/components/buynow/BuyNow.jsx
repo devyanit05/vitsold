@@ -4,6 +4,7 @@ import { Divider } from "@mui/material";
 import Option from "./Option";
 import Subtotal from "./Subtotal";
 import Right from "./Right";
+import ButtonBuy from "./ButtonBuy";
 
 const BuyNow = () => {
   return (
@@ -22,9 +23,13 @@ const BuyNow = () => {
             />
             <div className="item_details">
               <h3>Long Title of Product fulll...</h3>
-              <h3>Title of Product</h3>
+
+              <h3>Category of product</h3>
               <h3 className="differentprice">₹4049</h3>
               <Option />
+              <div style={{ textAlign: "end" }}>
+                <ButtonBuy />
+              </div>
             </div>
             <h3 className="item_price">₹4049.00</h3>
           </div>

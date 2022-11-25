@@ -1,22 +1,43 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./buynow.css";
 
 const Right = () => {
   return (
     <div className="right_buy">
-      <img src="" alt="" />
-      <h1 style={{ textAlign: "center", paddingX: "10px" }}>VitSolds</h1>
+      <h1 style={{ textAlign: "center", paddingX: "10px", color: "red" }}>
+        <strong>Important Instructions!</strong>
+      </h1>
       <div className="cost_right">
-        <p>Your order will be considered once you proceed to buy.</p>
+        <p>
+          Your order will be considered once you proceed to buy. A mail will be
+          sent from your mail id to owner's account mentioning your interest in
+          there product.
+        </p>
         <br />
-        <span style={{ color: "#565959" }}>
-          Select this option at checkout.{" "}
+        <span style={{ color: "brown", fontSize: "14px " }}>
+          If you face any problems with your order or inappropriate behaviour
+          from our senders, kindly contact us through this{" "}
+          <Link to="/help" className="linkk" style={{ color: "blue" }}>
+            help
+          </Link>{" "}
+          button below.
         </span>
-        <h3>
-          Subtotal ( 1 item ) :{" "}
-          <strong style={{ fontWeight: "700" }}>₹4049.00</strong>
-        </h3>
-        <button className="rightbuy_btn">Procceed to Buy</button>
+        <div style={{ textAlign: "end" }}>
+          <Link to="/help" className="linkk">
+            <button
+              className="leftbuy_btn"
+              style={{
+                margin: "10px",
+                backgroundColor: "black",
+                color: "whitesmoke",
+                fontWeight: "bold",
+              }}
+            >
+              Help
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

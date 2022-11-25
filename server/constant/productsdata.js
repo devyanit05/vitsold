@@ -3,8 +3,8 @@ const crouselproducts = [
         id: 'product1',
         url: 'https://rukminim1.flixcart.com/image/150/150/kapoo7k0/electric-kettle/p/6/s/pigeon-favourite-original-imafs7xhj5uwgrh4.jpeg?q=70',
         title: {
-            category: 'Home & Kitchen',
-            longTitle: 'Pigeon FAVOURITE Electric Kettle  (1.5 L, Silver, Black)'
+            category: 'HouseHold',
+            longTitle: 'Pigeon Electric Kettle'
         },
         price: {
             mrp: 1195,
@@ -19,8 +19,8 @@ const crouselproducts = [
         id: 'product2',
         url: 'https://rukminim1.flixcart.com/image/416/416/kl6wx3k0/sandwich-maker/8/r/d/sandwich-01-flipkart-smartbuy-original-imagydds4zthxt8z.jpeg?q=70',
         title: {
-            category: 'Sandwich Makers',
-            longTitle: 'Flipkart SmartBuy Sandwich 01 Grill  (Black)'
+            category: 'HouseHold',
+            longTitle: 'SmartBuy Sandwich 01 Grill'
         },
         price: {
             mrp: 1499,
@@ -35,8 +35,8 @@ const crouselproducts = [
         id: 'product3',
         url: 'https://rukminim1.flixcart.com/image/150/150/kohigsw0/resistance-tube/c/s/e/new-adjustable-single-resistance-tube-multicolor-na-ajro-deal-original-imag2xg88mhmwxz5.jpeg?q=70',
         title: {
-            category: 'Fitness Gear',
-            longTitle: 'AJRO DEAL New Adjustable Single Resistance Tube (Multicolor) Resistance Tube  (Multicolor)'
+            category: 'Other',
+            longTitle: 'Single Resistance Tube'
         },
         price: {
             mrp: 499,
@@ -51,8 +51,8 @@ const crouselproducts = [
         id: 'product4',
         url: 'https://rukminim1.flixcart.com/image/300/300/kll7bm80/smartwatch/c/1/n/43-mo-sw-sense-500-android-ios-molife-original-imagyzyycnpujyjh.jpeg?q=70',
         title: {
-            category: 'Smart Watches',
-            longTitle: 'Molife Sense 500 Smartwatch  (Black Strap, Freesize)',
+            category: 'Electronics',
+            longTitle: 'Molife Sense 500 Smartwatch',
         },
         price: {
             mrp: 6999,
@@ -67,8 +67,8 @@ const crouselproducts = [
         id: 'product5',
         url: 'https://rukminim1.flixcart.com/image/416/416/k3uhhu80/hair-dryer/n/m/t/nova-2800-w-professional-nhp-8220-original-imafmvwfhmzsxdrw.jpeg?q=70',
         title: {
-            category: 'Trimmers, Dryers & more',
-            longTitle: 'Nova Professional NHP 8220 Hair Dryer  (1800 W, Multicolor)'
+            category: 'Electronics',
+            longTitle: 'Nova  NHP 8220 Hair Dryer'
         },
         price: {
             mrp: 1899,

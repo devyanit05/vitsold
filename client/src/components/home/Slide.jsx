@@ -66,9 +66,9 @@ const Slide = (props) => {
                 <div className="product_img">
                   <img src={e.url} alt="productitem" />
                 </div>
-                <p className="products_name">{e.title.shortTitle}</p>
-                <p className="products_offer">{e.owner}</p>
-                <p className="products_explore">{e.mailowner}</p>
+                <p className="products_name">{e.title.longTitle}</p>
+                <p className="products_offer">{e.title.category}</p>
+                <p className="products_explore">{e.owner}</p>
               </div>
             );
           })

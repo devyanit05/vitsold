@@ -11,22 +11,13 @@ router.get('/getproducts', async (req, res) => {
     try {
         const productsdata = await Product.find();
         res.status(201).json(productsdata);
-        // console.log(productsdata);
-
-        // .then(() => {
-        //     console.log("data found");
-        //     console.log(productsdata);
-        //     // res.status(200)
-        //     res.send("done")
-        // }).catch((err) => {
-        //     console.log(err.message)
-        //     res.send(err.message)
-        // });
     } catch (err) {
         console.log(err)
         res.send(err.message)
     }
 })
+
+router.post('/uploadproduct', DataController.addProduct)
 
 
 

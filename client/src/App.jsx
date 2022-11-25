@@ -8,6 +8,8 @@ import Signin from "./components/auth/Signin";
 import Signup from "./components/auth/Signup";
 import Cart from "./components/cart/Cart";
 import BuyNow from "./components/buynow/BuyNow";
+import Help from "./components/help/Help";
+import SellProducts from "./components/sell/SellProducts";
 
 import "./App.css";
 
@@ -24,6 +26,10 @@ function App() {
 
         <Route exact path="/login" element={<Signin />} />
         <Route exact path="/register" element={<Signup />} />
+
+        <Route exact path="/help" element={<Help />} />
+
+        <Route exact path="/sell" element={<SellProducts />} />
       </Routes>
       <Footer />
     </div>

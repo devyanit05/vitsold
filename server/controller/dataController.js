@@ -1,6 +1,7 @@
 const productsdata = require("../constant/productsdata");
 const Product = require("../models/productSchema");
 
+
 exports.DefaultData = async (req, res) => {
     try {
         await Product.deleteMany({});
@@ -19,4 +20,25 @@ exports.DefaultData = async (req, res) => {
         res.send("error: " + err.message)
     }
 };
+
+exports.addProduct = (req, res) => {
+    const obj = {
+        name: req.body.name,
+        desc: req.body.desc,
+        img: {
+            data: fs.readFileSync(path.join("D:/projection/uploads/" + req.file.filename)),
+            contentType: 'image/jpg'
+        },
+
+    }
+    Project.create(obj, (err, item) => {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            // item.save();
+            res.redirect('/');
+        }
+    });
+}
 

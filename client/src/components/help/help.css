@@ -1,0 +1,61 @@
+.container.contact__container {
+    width: 58%;
+    display: grid;
+    grid-template-columns: 30% 58%;
+    gap: 12%;
+}
+
+.contact {
+    text-align: center;
+}
+
+/* ==============FORM============ */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact__container input,
+textarea {
+    margin-left: 25rem;
+    width: 30rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.509);
+    resize: none;
+    color: rgb(1, 44, 82);
+}
+
+.help_btn {
+    width: 100%;
+    margin-left: 33rem;
+    margin-top: 15px;
+    padding: 8px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #fff314;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px -5px rgba(0, 0, 0, .5);
+}
+
+
+/* ======== MEDIA QUERIES (MEDIUM DEVICES)      ===========*/
+@media screen and (max-width: 1024px) {
+    .container.contact__container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* ======== MEDIA QUERIES (SMALL DEVICES)      ===========*/
+@media screen and (max-width: 600px) {
+    .container.contact__container {
+        grid-template-columns: 1fr;
+        width: var(--container-width-sm);
+    }
+}
