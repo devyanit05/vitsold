@@ -11,7 +11,7 @@ const Books = () => {
       </div>
       <div className="all_cards">
         <div className="single_card">
-          <ProductCard />
+          <ProductCard img="" title="Calciiii" id="3" />
         </div>
       </div>
     </div>

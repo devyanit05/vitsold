@@ -1,7 +1,7 @@
 export const getProducts = () => {
     return async (dispatch) => {
         const response = await fetch(
-            "http://localhost:5000/getproducts",
+            "http://localhost:5005/getproducts",
             {
                 method: "GET",
                 headers: {

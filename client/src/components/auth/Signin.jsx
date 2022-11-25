@@ -23,9 +23,7 @@ const Signin = () => {
     <>
       <section>
         <div className="sign_container">
-          <div className="sign_header">
-            <img src="" alt="" />
-          </div>
+          <div className="sign_header"></div>
           <div className="sign_form">
             <form>
               <h1>Sign In</h1>
