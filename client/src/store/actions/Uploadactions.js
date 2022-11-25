@@ -1,7 +1,7 @@
 export const uploadProduct = (creds) => {
     return async (dispatch) => {
         const response = await fetch(
-            "http://localhost:5000/uploadproduct",
+            "http://localhost:5005/uploadproduct",
             {
                 method: "POST",
                 headers: {
