@@ -42,7 +42,7 @@ const SellProducts = () => {
       <div className="title_form">
         <h1>Sell Your Products</h1>
       </div>
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="sell_form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="product_name">Product Name:</label>
           <input

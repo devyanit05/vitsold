@@ -13,12 +13,12 @@
     padding: 2rem;
 }
 
-.form label {
+.sell_form label {
     font-weight: 700;
     font-size: large;
 }
 
-.form input {
+.sell_form input {
     border: 1px solid rgba(186, 186, 186, 0.696);
     height: 2rem;
     padding: 1rem;
