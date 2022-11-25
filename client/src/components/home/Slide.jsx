@@ -9,6 +9,7 @@ import Box from "@mui/material/Box";
 import Skeleton from "@mui/material/Skeleton";
 import "./slide.css";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const responsive = {
   superLargeDesktop: {
@@ -40,7 +41,9 @@ const Slide = (props) => {
     <div className="products_section">
       <div className="products_deal">
         <h3>All Products</h3>
-        <button className="view_btn">View All</button>
+        <Link className="linkk" to="/all-products">
+          <button className="view_btn">View All</button>
+        </Link>
       </div>
       <Divider />
 
