@@ -6,7 +6,7 @@ require("./db/conn");
 
 
 const connect = require('./db/conn')
-const routes = require('./routes/routes')
+const routes = require('./routes/routes.js')
 const cors = require('cors')
 
 
@@ -22,5 +22,5 @@ app.use(routes)
 
 
 app.listen(port, () => {
-    console.log(`Server listening on ${process.env.PORT}`);
+    console.log(`Server listening on ${port}`);
 })
