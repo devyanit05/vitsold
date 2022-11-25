@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import "./auth.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { connect } from "react-redux";
+import { login } from "../../store/actions/userAct";
 
-const Signin = () => {
+const Signin = (props) => {
   const [logdata, setData] = useState({
     email: "",
     password: "",
   });
-  console.log(logdata);
+  const navigate = useNavigate()
 
   const adddata = (e) => {
     const { name, value } = e.target;
@@ -19,15 +21,25 @@ const Signin = () => {
     });
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // console.log(logdata)
+    props.login(logdata)
+    if(localStorage.getItem('token')){
+      navigate('/')
+    }
+    else{
+      alert(localStorage.getItem('auth-error'))
+    }
+  }
+  
   return (
     <>
       <section>
         <div className="sign_container">
-          <div className="sign_header">
-            <img src="" alt="" />
-          </div>
+          <div className="sign_header"></div>
           <div className="sign_form">
-            <form>
+            <form onSubmit={handleSubmit}>
               <h1>Sign In</h1>
               <div className="form_data">
                 <label htmlFor="email">Email</label>
@@ -66,4 +78,10 @@ const Signin = () => {
   );
 };
 
-export default Signin;
+const mapDispatchToProps = (dispatch) => {
+  return{
+    login: (creds) => dispatch(login(creds))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Signin)

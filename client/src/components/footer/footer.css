@@ -1,7 +1,7 @@
 footer {
     position: relative;
     top: 60px;
-    background-color: #232F3E;
+    background-color: #4c003392;
 }
 
 footer .footer_container {
@@ -30,7 +30,7 @@ footer .footer_container .footer_details_one p {
 
 
 footer .lastdetails {
-    background-color: #131A22;
+    background-color: #4c0033f3;
     height: 6vh;
 }
 

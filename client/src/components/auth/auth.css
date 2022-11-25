@@ -36,7 +36,7 @@ section {
 .sign_form label {
     font-size: 13px;
     font-weight: 700;
-    margin-bottom: 1px;
+    /* margin-bottom: 1px; */
 }
 
 .sign_form input {
@@ -62,7 +62,7 @@ section {
     outline: none;
     border-radius: 3px;
     color: #111;
-    background: linear-gradient(to bottom, #f7dfa5, #f0c14b)
+    background: #fe1a98
 }
 
 .sign_form input:focus {

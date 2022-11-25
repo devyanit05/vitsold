@@ -32,10 +32,11 @@ const responsive = {
 };
 
 const Slide = (props) => {
-  let productData = null;
+
   useEffect(() => {
     props.getProd();
-  }, [props]);
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <div className="products_section">

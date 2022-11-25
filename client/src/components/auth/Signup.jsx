@@ -1,48 +1,56 @@
 import React, { useState } from "react";
 import "./auth.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { connect } from "react-redux";
+import { createUser } from "../../store/actions/userAct";
 
-const Signup = () => {
+const Signup = (props) => {
   const [udata, setUdata] = useState({
-    fname: "",
+    name: "",
     email: "",
-    mobile: "",
     password: "",
-    cpassword: "",
   });
 
-  const adddata = (e) => {
-    const { name, value } = e.target;
+  const navigate = useNavigate()
 
-    setUdata(() => {
-      return {
-        ...udata,
-        [name]: value,
-      };
-    });
-  };
+  const handleChange = (e) => {
+    setUdata({
+      ...udata,
+      [e.target.name]: e.target.value
+    })
+  }
 
-  console.log(udata);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // console.log(udata)
+    // console.log(props)
+    props.signup(udata)
+    if(localStorage.getItem('token')){
+      navigate('/')
+    }
+    else{
+      alert(localStorage.getItem('auth-error'))
+    }
+  }
+
 
   return (
     <>
       <section>
         <div className="sign_container">
-          <div className="sign_header">
-            <img src="" alt="" />
-          </div>
+          <div className="sign_header"></div>
           <div className="sign_form">
-            <form action="">
+            <form onSubmit={handleSubmit}>
               <h1>Register Account</h1>
               <div className="form_data">
                 <label htmlFor="fname">Name</label>
                 <input
                   type="text"
-                  name="fname"
+                  name="name"
                   id="fname"
                   placeholder="Enter your name here"
-                  onChange={adddata}
-                  value={udata.fname}
+                  onChange={handleChange}
+                  value={udata.name}
                 />
               </div>
               <div className="form_data">
@@ -52,23 +60,12 @@ const Signup = () => {
                   name="email"
                   id="email"
                   placeholder="Enter vit.edu email here"
-                  onChange={adddata}
+                  onChange={handleChange}
                   // onChange={adddata}
                   value={udata.email}
                 />
               </div>
-              <div className="form_data">
-                <label htmlFor="number">Contact Number</label>
-                <input
-                  type="type"
-                  name="mobile"
-                  id="mobile"
-                  placeholder="Enter contact number here"
-                  onChange={adddata}
-                  // onChange={adddata}
-                  value={udata.mobile}
-                />
-              </div>
+              
               <div className="form_data">
                 <label htmlFor="password">Password</label>
                 <input
@@ -76,24 +73,12 @@ const Signup = () => {
                   name="password"
                   id="password"
                   placeholder="atleast 6 characters"
-                  onChange={adddata}
+                  onChange={handleChange}
                   // onChange={adddata}
                   value={udata.password}
                 />
               </div>
-              <div className="form_data">
-                <label htmlFor="password">Confirm Password</label>
-                <input
-                  type="password"
-                  name="cpassword"
-                  id="cpassword"
-                  placeholder="atleast 6 characters"
-                  onChange={adddata}
-                  value={udata.cpassword}
-                />
-              </div>
-              <button className="signin_btn">Continue</button>
-
+              <button type="submit" className="signin_btn">Continue</button>
               <div className="signin_info">
                 <p>Already Have an Account ?</p>
                 <Link className="linkk" to="/login">
@@ -108,4 +93,10 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+const mapDispatchToProps = (dispatch) => {
+  return{
+    signup: (creds) => dispatch(createUser(creds))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Signup)
