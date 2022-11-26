@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import "./display.css";
 import Title from "./CatTitle";
 import ProductCard from "./ProductCard";
-import { connect } from "react-redux";
-import { getCat } from "../../store/actions/Productaction";
+
 import { useParams } from "react-router-dom";
 
 const Electronics = (props) => {
@@ -17,7 +16,6 @@ const Electronics = (props) => {
 
   useEffect(() => {
     console.log("Before: ",props)
-    // props.getCat("Electronics")
     console.log(params.cat.toString())
     console.log("After: ",props)
   }, [])
@@ -47,10 +45,6 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return{
-    getCat : (cat) => dispatch(getCat(cat))
-  }
-}
 
-export default connect(mapStateToProps,mapDispatchToProps)(Electronics);
+
+export default connect(mapStateToProps)(Electronics);
