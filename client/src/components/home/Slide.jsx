@@ -72,7 +72,7 @@ const Slide = (props) => {
                   <img src={require(`../../../../server/images/${e.product_img}`)} alt="productitem" />
                 </div>
                 <p className="products_name">{e.product_name}</p>
-                <p className="products_offer">{e.product_categoty}</p>
+                <p className="products_offer">{e.product_category}</p>
                 <p className="products_explore">{e.owner_name}</p>
               </div>
             );
