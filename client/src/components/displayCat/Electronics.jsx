@@ -9,9 +9,9 @@ const Electronics = (props) => {
   let params = useParams()
 
   let category = params.cat.toString()
-  let prod = props.products.products.filter((product) => {
+  let prod = props.products.products ? props.products.products.filter((product) => {
     return product.product_category === category
-  })
+  }):null
 
 
   useEffect(() => {
