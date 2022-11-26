@@ -37,6 +37,8 @@ const SellProducts = () => {
         console.log(err);
       });
     alert("done!");
+
+    console.log(newProduct);
   };
 
   const handleInput = (e) => {
@@ -72,6 +74,26 @@ const SellProducts = () => {
         </h1>
       </div>
       <form className="formm" onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="owner_name">Owner Name:</label>
+          <input
+            type="text"
+            value={newProduct.owner_name}
+            onChange={handleInput}
+            name="owner_name"
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="owner_email">Owner Email:</label>
+          <input
+            type="text"
+            value={newProduct.owner_email}
+            onChange={handleInput}
+            name="owner_email"
+            required
+          />
+        </div>
         <div>
           <label htmlFor="product_name">Product Name:</label>
           <input
@@ -139,10 +161,20 @@ const SellProducts = () => {
           <input
             type="file"
             accept=".png, .jpg, .jpeg"
-            value={newProduct.product_img}
+            // value={newProduct.product_img}
             onChange={handlePhoto}
             name="product_img"
             // required
+          />
+        </div>
+        <div>
+          <label htmlFor="product_description">Description:</label>
+          <input
+            type="text"
+            value={newProduct.product_description}
+            onChange={handleInput}
+            name="product_description"
+            required
           />
         </div>
         <button className="btn_sell" type="submit">

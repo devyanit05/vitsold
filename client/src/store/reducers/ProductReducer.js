@@ -10,6 +10,15 @@ const productsReducer = (state = initState, action) => {
                 ...state,
                 products: action.products
             }
+        case 'GET_CAT':
+            let prod=state.products.filter((product) => {
+                return product.title.category === action.category
+            })
+
+            return {
+                ...state,
+                products:prod
+            }
         default: return state
     }
 }
