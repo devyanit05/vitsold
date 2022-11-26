@@ -12,9 +12,13 @@ const ProductCard = (props) => {
         alt="..."
       />
       <div className="card-body info">
-        <h5 className="card-title">{product.product_name}</h5>
-        <button className="btn">
-          <Link className="linkk" to={`/getproductsone/${product._id}`}>
+        {/* <h5 className="card-title">{product.product_name}</h5> */}
+        <button className="btn btn_details">
+          <Link
+            className="linkk"
+            to={`/getproductsone/${product._id}`}
+            style={{ color: "black" }}
+          >
             View Details
           </Link>
         </button>
