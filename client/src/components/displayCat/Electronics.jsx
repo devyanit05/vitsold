@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./display.css";
 import Title from "./CatTitle";
 import ProductCard from "./ProductCard";
-
+import { connect } from "react-redux";
 import { useParams } from "react-router-dom";
 
 const Electronics = (props) => {
