@@ -4,8 +4,8 @@ const express = require('express');
 
 
 const app = express();
-require("./db/conn");
 require("dotenv").config();
+require("./db/conn");
 
 const connect = require('./db/conn')
 const routes = require('./routes/routes.js')
