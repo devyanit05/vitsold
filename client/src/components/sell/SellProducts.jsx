@@ -39,6 +39,7 @@ const SellProducts = () => {
     alert("done!");
 
     console.log(newProduct);
+    
   };
 
   const handleInput = (e) => {
