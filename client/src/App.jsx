@@ -12,11 +12,6 @@ import Help from "./components/help/Help";
 import SellProducts from "./components/sell/SellProducts";
 import AllProducts from "./components/displayCat/AllProducts";
 import Electronics from "./components/displayCat/Electronics";
-import Books from "./components/displayCat/Books";
-import Flats from "./components/displayCat/Flats";
-import HouseHolds from "./components/displayCat/HouseHold";
-import Projects from "./components/displayCat/Projects";
-import Others from "./components/displayCat/Other";
 
 import "./App.css";
 
@@ -39,12 +34,7 @@ function App() {
         <Route exact path="/sell" element={<SellProducts />} />
 
         <Route exact path="/all-products" element={<AllProducts />} />
-        <Route exact path="/electronics" element={<Electronics />} />
-        <Route exact path="/books" element={<Books />} />
-        <Route exact path="/flats" element={<Flats />} />
-        <Route exact path="/households" element={<HouseHolds />} />
-        <Route exact path="/projects" element={<Projects />} />
-        <Route exact path="/others" element={<Others />} />
+        <Route exact path="/category/:cat" element={<Electronics />} />
       </Routes>
       <Footer />
     </div>

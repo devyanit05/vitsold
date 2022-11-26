@@ -27,10 +27,3 @@ export const getProducts = () => {
         }
     }
 }
-
-export const getCat = (category) => {
-    return{
-        type:'GET_CAT',
-        category
-    }
-}
