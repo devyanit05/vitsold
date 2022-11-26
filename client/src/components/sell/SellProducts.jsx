@@ -39,6 +39,7 @@ const SellProducts = () => {
     alert("done!");
 
     console.log(newProduct);
+    
   };
 
   const handleInput = (e) => {
@@ -169,7 +170,7 @@ const SellProducts = () => {
         </div>
         <div>
           <label htmlFor="product_description">Description:</label>
-          <input
+          <textarea
             type="text"
             value={newProduct.product_description}
             onChange={handleInput}

@@ -3,12 +3,20 @@ import "./display.css";
 import Title from "./CatTitle";
 import ProductCard from "./ProductCard";
 import { connect } from "react-redux";
-import { getCat } from "../../store/actions/Productaction";
+import { useParams } from "react-router-dom";
 
 const Electronics = (props) => {
+  let params = useParams()
+
+  let category = params.cat.toString()
+  let prod = props.products.products.filter((product) => {
+    return product.product_category === category
+  })
+
+
   useEffect(() => {
     console.log("Before: ",props)
-    props.getCat("Electronics")
+    console.log(params.cat.toString())
     console.log("After: ",props)
   }, [])
   
@@ -18,7 +26,7 @@ const Electronics = (props) => {
         <Title title="Electronics" />
       </div>
       <div className="all_cards">
-      { props.products && props.products.products.map((product) => {
+      { props.products && prod.map((product) => {
         return(
           <div className="single_card">
             <ProductCard product = {product}/>
@@ -37,10 +45,6 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return{
-    getCat : (cat) => dispatch(getCat(cat))
-  }
-}
 
-export default connect(mapStateToProps,mapDispatchToProps)(Electronics);
+
+export default connect(mapStateToProps)(Electronics);

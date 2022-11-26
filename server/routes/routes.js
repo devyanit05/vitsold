@@ -27,7 +27,7 @@ router.post('/addDefault', DataController.DefaultData)
 // get products data api
 router.get('/getproducts', async (req, res) => {
     try {
-        const productsdata = await Product.find();
+        const productsdata = await Upload.find();
         res.status(201).json(productsdata);
     } catch (err) {
         console.log(err)
