@@ -23,7 +23,7 @@ const Electronics = (props) => {
   return (
     <div className="main_container">
       <div className="page_title">
-        <Title title="Electronics" />
+        <Title title={category} />
       </div>
       <div className="all_cards">
       { props.products && prod.map((product) => {
