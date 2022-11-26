@@ -10,10 +10,10 @@ const CatNav = () => {
           <Link className="linkk" to="/projects">
             <p>Projects</p>
           </Link>
-          <Link className="linkk" to="/electronics">
+          <Link className="linkk" to="/category/Electronics">
             <p>Electronics</p>
           </Link>
-          <Link className="linkk" to="/books">
+          <Link className="linkk" to="/category/Books">
             <p>Books</p>
           </Link>
           <Link className="linkk" to="/sell">
@@ -21,13 +21,13 @@ const CatNav = () => {
               Sell Your Products
             </p>
           </Link>
-          <Link className="linkk" to="/households">
+          <Link className="linkk" to="/category/HouseHold">
             <p>HouseHold</p>
           </Link>
-          <Link className="linkk" to="/flats">
+          <Link className="linkk" to="/category/Flats">
             <p>Flats</p>
           </Link>
-          <Link className="linkk" to="/others">
+          <Link className="linkk" to="/category/Other">
             <p>Others</p>
           </Link>
         </div>

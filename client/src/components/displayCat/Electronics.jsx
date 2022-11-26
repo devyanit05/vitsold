@@ -4,11 +4,21 @@ import Title from "./CatTitle";
 import ProductCard from "./ProductCard";
 import { connect } from "react-redux";
 import { getCat } from "../../store/actions/Productaction";
+import { useParams } from "react-router-dom";
 
 const Electronics = (props) => {
+  let params = useParams()
+
+  let category = params.cat.toString()
+  let prod = props.products.products.filter((product) => {
+    return product.title.category === category
+  })
+
+
   useEffect(() => {
     console.log("Before: ",props)
-    props.getCat("Electronics")
+    // props.getCat("Electronics")
+    console.log(params.cat.toString())
     console.log("After: ",props)
   }, [])
   
@@ -18,7 +28,7 @@ const Electronics = (props) => {
         <Title title="Electronics" />
       </div>
       <div className="all_cards">
-      { props.products && props.products.products.map((product) => {
+      { props.products && prod.map((product) => {
         return(
           <div className="single_card">
             <ProductCard product = {product}/>
