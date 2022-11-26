@@ -1,13 +1,58 @@
 const mongoose = require("mongoose");
 
 const productSchema = new mongoose.Schema({
-    id: String,
-    url: String,
-    title: Object,
-    price: Object,
-    description: String,
-    owner: String,
-    mailowner: String
+    owner_name: {
+        type: String,
+        required: true,
+        trim: true
+    },
+
+    owner_email: {
+        type: String,
+        required: true,
+        trim: true
+    },
+
+    product_name: {
+        type: String,
+        required: true,
+        trim: true
+    },
+
+    product_category: {
+        type: String,
+        required: true,
+        trim: true
+    },
+
+    product_mrp: {
+        type: String,
+        required: true,
+        trim: true
+    },
+
+    product_price: {
+        type: String,
+        required: true,
+        trim: true
+    },
+
+    product_discount: {
+        type: String,
+        required: true,
+        trim: true
+    },
+
+    product_img: {
+        type: String,
+        // required: true,
+    },
+
+    product_description: {
+        type: String,
+        required: true,
+        trim: true
+    },
 });
 
 

@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import "./product.css";
 
 const ProductCard = (props) => {
+  const product = props.product
   return (
     <div className="card card_main">
-      <img src={props.img} className="card-img-top" alt="..." />
+      <img src={product.url} className="card-img-top" alt="..." />
       <div className="card-body info">
-        <h5 className="card-title">{props.title}</h5>
+        <h5 className="card-title">{product.title.category}</h5>
         <button className="btn">
-          <Link className="linkk" to={`/getproductsone/${props.id}`}>
+          <Link className="linkk" to={`/getproductsone/${product.id}`}>
             View Details
           </Link>
         </button>

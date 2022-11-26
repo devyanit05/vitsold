@@ -35,6 +35,7 @@ const Slide = (props) => {
 
   useEffect(() => {
     props.getProd();
+    // console.log(props.products)
     // eslint-disable-next-line
   }, []);
 
