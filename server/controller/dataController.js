@@ -21,24 +21,24 @@ exports.DefaultData = async (req, res) => {
     }
 };
 
-exports.addProduct = (req, res) => {
-    const obj = {
-        name: req.body.name,
-        desc: req.body.desc,
-        img: {
-            data: fs.readFileSync(path.join("D:/projection/uploads/" + req.file.filename)),
-            contentType: 'image/jpg'
-        },
+// exports.addProduct = (req, res) => {
+//     const obj = {
+//         name: req.body.name,
+//         desc: req.body.desc,
+//         img: {
+//             data: fs.readFileSync(path.join("D:/projection/uploads/" + req.file.filename)),
+//             contentType: 'image/jpg'
+//         },
 
-    }
-    Project.create(obj, (err, item) => {
-        if (err) {
-            console.log(err);
-        }
-        else {
-            // item.save();
-            res.redirect('/');
-        }
-    });
-}
+//     }
+//     Project.create(obj, (err, item) => {
+//         if (err) {
+//             console.log(err);
+//         }
+//         else {
+//             // item.save();
+//             res.redirect('/');
+//         }
+//     });
+// }
 

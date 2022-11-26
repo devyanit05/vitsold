@@ -152,29 +152,6 @@
     box-shadow: 0 0 10px -5px rgba(0, 0, 0, .5);
 }
 
-.cost_right .rightbuy_btn:hover {
-    background-color: #f3cc0a;
-}
-
-.cost_right .emi {
-    padding: 10px;
-    border: 1px solid #ebe8e8;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    border-radius: 3px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.cost_right .hide {
-    display: none;
-}
-
-.cost_right .show {
-    display: block;
-}
-
 
 
 /* empty cart */

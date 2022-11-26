@@ -17,7 +17,9 @@ const Main = () => {
           <Slide />
         </div>
         <div className="right_slide">
-          <h4>VIT Pune</h4>
+          <h4>
+            <strong>VIT Pune</strong>
+          </h4>
           <img
             src="https://www.pngitem.com/pimgs/m/140-1401634_vishwakarma-institute-of-technology-pune-logo-hd-png.png"
             alt="vit logo"
