@@ -5,8 +5,8 @@ import "./buynow.css";
 const Right = () => {
   return (
     <div className="right_buy">
-      <h1 style={{ textAlign: "center", paddingX: "10px", color: "red" }}>
-        <strong>Important Instructions!</strong>
+      <h1 style={{ textAlign: "center", paddingX: "2px", color: "red" }}>
+        <strong>Instructions!</strong>
       </h1>
       <div className="cost_right">
         <p>
