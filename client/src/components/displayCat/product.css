@@ -33,5 +33,6 @@ img {
 .card-title {
     font-size: 2rem;
     font-weight: bold;
-    color: rgb(64, 94, 149);
+    color: black;
+    text-align: left;
 }

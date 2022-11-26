@@ -2,8 +2,12 @@
     margin-top: 70px;
 }
 
-.page_title {}
+.all_cards {
+    display: flex;
+    flex-direction: row;
 
-.all_cards {}
+}
 
-.single_card {}
+.single_card {
+    margin: 5px;
+}
