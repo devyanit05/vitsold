@@ -6,7 +6,7 @@ const ProductCard = (props) => {
   const product = props.product
   return (
     <div className="card card_main">
-      <img src={product.product_img} className="card-img-top" alt="..." />
+      <img src={require(`/Users/mohd.ashharullah/Documents/sell_Vit/server/images/${product.product_img}`)} className="card-img-top" alt="..." />
       <div className="card-body info">
         <h5 className="card-title">{product.product_category}</h5>
         <button className="btn">
