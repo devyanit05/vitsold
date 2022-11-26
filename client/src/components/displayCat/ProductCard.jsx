@@ -6,11 +6,11 @@ const ProductCard = (props) => {
   const product = props.product
   return (
     <div className="card card_main">
-      <img src={product.url} className="card-img-top" alt="..." />
+      <img src={product.product_img} className="card-img-top" alt="..." />
       <div className="card-body info">
-        <h5 className="card-title">{product.title.category}</h5>
+        <h5 className="card-title">{product.product_category}</h5>
         <button className="btn">
-          <Link className="linkk" to={`/getproductsone/${product.id}`}>
+          <Link className="linkk" to={`/getproductsone/${product._id}`}>
             View Details
           </Link>
         </button>

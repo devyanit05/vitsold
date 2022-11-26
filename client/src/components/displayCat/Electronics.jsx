@@ -10,7 +10,7 @@ const Electronics = (props) => {
 
   let category = params.cat.toString()
   let prod = props.products.products.filter((product) => {
-    return product.title.category === category
+    return product.product_category === category
   })
 
 

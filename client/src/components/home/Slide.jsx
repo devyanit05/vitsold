@@ -69,11 +69,11 @@ const Slide = (props) => {
             return (
               <div className="products_items">
                 <div className="product_img">
-                  <img src={e.url} alt="productitem" />
+                  <img src={require(`/Users/mohd.ashharullah/Documents/sell_Vit/server/images/${e.product_img}`)} alt="productitem" />
                 </div>
-                <p className="products_name">{e.title.longTitle}</p>
-                <p className="products_offer">{e.title.category}</p>
-                <p className="products_explore">{e.owner}</p>
+                <p className="products_name">{e.product_name}</p>
+                <p className="products_offer">{e.product_categoty}</p>
+                <p className="products_explore">{e.owner_name}</p>
               </div>
             );
           })
