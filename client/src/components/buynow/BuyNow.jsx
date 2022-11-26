@@ -5,8 +5,16 @@ import Option from "./Option";
 import Subtotal from "./Subtotal";
 import Right from "./Right";
 import ButtonBuy from "./ButtonBuy";
+import { connect } from "react-redux";
+import { useParams } from "react-router-dom";
 
-const BuyNow = () => {
+
+const BuyNow = (props) => {
+  let params = useParams();
+  let id = params.id.toString()
+  let product = props.products ? props.products.products.filter((product) => {
+    return product._id === id;
+  }):null
   return (
     <div className="buynow_section">
       <div className="buynow_container">
@@ -18,20 +26,20 @@ const BuyNow = () => {
 
           <div className="item_containert">
             <img
-              src="https://www.xcluma.com/image/cache/catalog/products/BE-00-2408-400x400.png.webp"
+              src={require(`../../../../server/images/${product.product_img}`)}
               alt="imgitem"
             />
             <div className="item_details">
               <h3>Long Title of Product fulll...</h3>
 
               <h3>Category of product</h3>
-              <h3 className="differentprice">₹4049</h3>
+              <h3 className="differentprice">{product.product_price}</h3>
               <Option />
               <div style={{ textAlign: "end" }}>
                 <ButtonBuy />
               </div>
             </div>
-            <h3 className="item_price">₹4049.00</h3>
+            <h3 className="item_price">{product.product_mrp}</h3>
           </div>
           <Divider />
           <Subtotal />
@@ -42,4 +50,10 @@ const BuyNow = () => {
   );
 };
 
-export default BuyNow;
+const mapStateToProps = (state) => {
+  return{
+    products: state.products
+  }
+}
+
+export default connect(mapStateToProps)(BuyNow)

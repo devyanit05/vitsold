@@ -7,7 +7,7 @@ const CatNav = () => {
     <div className="new_nav">
       <div className="nav_data">
         <div className="left_data">
-          <Link className="linkk" to="/projects">
+          <Link className="linkk" to="/category/Projects">
             <p>Projects</p>
           </Link>
           <Link className="linkk" to="/category/Electronics">
