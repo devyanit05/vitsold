@@ -1,5 +1,8 @@
 {
     "githubPullRequests.ignoredPullRequestBranches": [
         "master"
+    ],
+    "marquee.widgets.npm-stats.packageNames": [
+        "server"
     ]
 }

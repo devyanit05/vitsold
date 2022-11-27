@@ -6,8 +6,8 @@ import Main from "./components/home/Main";
 import Footer from "./components/footer/Footer";
 import Signin from "./components/auth/Signin";
 import Signup from "./components/auth/Signup";
-import Cart from "./components/cart/Cart";
-import BuyNow from "./components/buynow/BuyNow";
+import SingleProduct from "./components/cart/SingleProduct";
+import Cart from "./components/buynow/Cart";
 import Help from "./components/help/Help";
 import SellProducts from "./components/sell/SellProducts";
 import AllProducts from "./components/displayCat/AllProducts";
@@ -23,8 +23,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Main />} />
 
-        <Route exact path="/getproductsone/:id" element={<Cart />} />
-        <Route exact path="/buynow" element={<BuyNow />} />
+        <Route exact path="/product/:id" element={<SingleProduct />} />
+        <Route exact path="/cart" element={<Cart />} />
 
         <Route exact path="/login" element={<Signin />} />
         <Route exact path="/register" element={<Signup />} />

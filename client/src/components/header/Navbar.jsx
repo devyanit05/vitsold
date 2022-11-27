@@ -36,7 +36,7 @@ const Navbar = () => {
           </div>
           <div className="cart_btn">
             <Badge badgeContent={4} color="primary">
-              <NavLink className="linkk" to="/buynow">
+              <NavLink className="linkk" to="/cart">
                 <ShoppingCartIcon id="icon" />
               </NavLink>
             </Badge>

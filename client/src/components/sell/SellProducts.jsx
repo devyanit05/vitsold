@@ -39,7 +39,6 @@ const SellProducts = () => {
     alert("done!");
 
     console.log(newProduct);
-    
   };
 
   const handleInput = (e) => {
@@ -115,6 +114,7 @@ const SellProducts = () => {
             name="product_category"
             required
           >
+            <option value="Others">Select Category Here</option>
             <option value="Electronics">Electronics</option>
             <option value="Books">Books</option>
             <option value="HouseHold">HouseHold</option>

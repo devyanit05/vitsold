@@ -33,5 +33,13 @@ img {
 .card-title {
     font-size: 2rem;
     font-weight: bold;
-    color: rgb(64, 94, 149);
+    color: black;
+    text-align: left;
+}
+
+.btn_details {
+    font-weight: bolder;
+    border: 1px solid gray;
+    background-color: thistle;
+    opacity: 0.75;
 }

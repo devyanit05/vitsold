@@ -1,9 +1,45 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./cart.css";
 import { Divider } from "@mui/material";
 import { letterSpacing } from "@mui/system";
+import { connect } from "react-redux";
+import { useParams } from "react-router-dom";
 
-const Cart = () => {
+const Cart = (props) => {
+  // const { id } = useParams();
+  // const [productData, setProductData] = useState("");
+
+  // const getProductData = async () => {
+  //   const res = await fetch(`/product/${id}`, {
+  //     method: "GET",
+  //     headers: {
+  //       Accept: "application/json",
+  //       "Content-Type": "application/json",
+  //     },
+  //     credentials: "include",
+  //   });
+
+  //   const data = await res.json();
+  //   console.log(data);
+
+  //   if (res.status !== 201) {
+  //     alert("no data available");
+  //   } else {
+  //     // console.log("ind mila hain");
+  //     setProductData(data);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   setTimeout(getProductData, 1000);
+  // }, [id]);
+
+  // console.log(p);
+  // let Id = id.id.toString();
+  // useEffect(() => {
+  //   console.log(Id);
+  // }, []);
+
   return (
     <div className="cart_section">
       <div className="cart_container">
@@ -15,10 +51,10 @@ const Cart = () => {
           </div>
         </div>
         <div className="right_cart">
-          <h3>Fitness Gear</h3>
-          <h4>Long Title</h4>
+          {/* <h3>{productData.product_name}</h3>
+          <h4>{productData.product_category}</h4>
           <Divider />
-          <p className="mrp">M.R.P : ₹1000</p>
+          <p className="mrp">{productData.product_mrp}</p> */}
           <p>
             Owner : <span style={{ color: "#b12704" }}>Devyaniii</span>
           </p>
