@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./buynow.css";
 import emailjs from "emailjs-com";
 
@@ -12,19 +12,39 @@ const templateParams = {
   MRP: "500",
 };
 
-const ButtonBuy = () => {
+const ButtonBuy = (props) => {
+  const product = props.product
+  const user = props.user
+  const [template, settemplate] = useState({})
+
+  useEffect(() => {
+    console.log(props.user)
+    settemplate({
+      to_email: product.owner_email,
+      from_email: user.email,
+      to_name: product.owner_name,
+      from_name: user.name,
+      product_name: product.product_name,
+      product_category: product.product_category,
+      MRP: product.product_mrp,
+    })
+    // eslint-disable-next-line
+  }, [])
+  
   const [active, setActive] = useState(false);
   const [buttonText, setButtonText] = useState("Proceed to Buy");
 
   const handleClick = (e) => {
     e.preventDefault();
     setActive(!active);
+    
+    // console.log(template);
     setButtonText("Email Sent to Owner");
     emailjs
       .send(
         "service_6bt2jci",
         "template_zp2dtyg",
-        templateParams,
+        template,
         "0FrxCXunj5vdrdn4L"
       )
       .then(

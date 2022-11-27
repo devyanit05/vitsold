@@ -1,13 +1,17 @@
 import React from "react";
 import "./navbar.css";
-// import logo from "../../assets/logo_app.png";
 import SearchIcon from "@mui/icons-material/Search";
 import { NavLink } from "react-router-dom";
 import Badge from "@mui/material/Badge";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Avatar from "@mui/material/Avatar";
+import { connect } from "react-redux";
+import { logout } from "../../store/actions/userAct";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const handleClick = () => {
+    localStorage.removeItem('token')
+  }
   return (
     <header>
       <nav>
@@ -29,8 +33,7 @@ const Navbar = () => {
         </div>
         <div className="right">
           <div className="nav_btn">
-            {/* <a href="/login">signin</a> */}
-            <NavLink className="linkk" to="/login">
+          <NavLink className="linkk" to="/login">
               signin
             </NavLink>
           </div>
@@ -49,4 +52,17 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+
+const mapStateToProps = (state) =>  {
+  return{
+    auth:state.auth
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return{
+    Logout : () => dispatch(logout())
+  }
+}
+
+export default  connect(mapStateToProps,mapDispatchToProps)(Navbar);
