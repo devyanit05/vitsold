@@ -21,7 +21,7 @@ const Cart = (props) => {
       <div className="cart_container">
         <div className="left_cart">
           <img src={require(`../../../../images/${product[0].product_img}`)} alt="cartimg" />
-          <img src={require(`../../../../images/${product[0].product_img}`)} alt="cartimg" />
+          
           <div className="cart_btn">
             <button className="cart_btn1">Add to Cart</button>
             <button className="cart_btn2">Buy Now</button>
@@ -30,21 +30,16 @@ const Cart = (props) => {
         <div className="right_cart">
           <h3>{product[0].product_name}</h3>
           <h4>{product[0].product_category}</h4>
-          <h3>{product[0].product_name}</h3>
-          <h4>{product[0].product_category}</h4>
+
           <Divider />
-          <p className="mrp">Cost: Rs.{product[0].product_mrp}</p>
           <p className="mrp">Cost: Rs.{product[0].product_mrp}</p>
           <p>
             Owner : <span style={{ color: "#b12704" }}>{product[0].owner_name}</span>
-            Owner : <span style={{ color: "#b12704" }}>{product[0].owner_name}</span>
           </p>
-          <p>Owner email : {product[0].owner_email}</p>
           <p>Owner email : {product[0].owner_email}</p>
 
           <div className="discount_box">
             <h5>
-              Discount : <span style={{ color: "#111" }}>{product[0].product_discount}%</span>
               Discount : <span style={{ color: "#111" }}>{product[0].product_discount}%</span>
             </h5>
           </div>
@@ -58,7 +53,6 @@ const Cart = (props) => {
                 letterSpacing: "0.4px",
               }}
             >
-              {product[0].product_description}
               {product[0].product_description}
             </span>
           </p>
