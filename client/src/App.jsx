@@ -23,8 +23,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Main />} />
 
-        <Route exact path="/getproductsone/:id" element={<Cart />} />
-        <Route exact path="/buynow" element={<BuyNow />} />
+        <Route exact path="/getproductsone/:id" element={<BuyNow />} />
+        <Route exact path="/cart" element={<Cart />} />
 
         <Route exact path="/login" element={<Signin />} />
         <Route exact path="/register" element={<Signup />} />

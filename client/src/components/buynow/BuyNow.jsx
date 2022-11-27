@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./buynow.css";
 import { Divider } from "@mui/material";
 import Option from "./Option";
@@ -10,10 +10,15 @@ import { useParams } from "react-router-dom";
 
 
 const BuyNow = (props) => {
-  let params = useParams();
-  let id = params.id.toString()
+
+  let p = useParams()
+  let Id = p.id.toString()
+  useEffect(() => {
+    console.log(Id)
+  }, [])
+  
   let product = props.products ? props.products.products.filter((product) => {
-    return product._id === id;
+    return product._id === Id;
   }):null
   return (
     <div className="buynow_section">
