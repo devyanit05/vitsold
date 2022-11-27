@@ -32,7 +32,6 @@ const responsive = {
 };
 
 const Slide = (props) => {
-
   useEffect(() => {
     props.getProd();
     // console.log(props.products)
@@ -69,7 +68,10 @@ const Slide = (props) => {
             return (
               <div className="products_items">
                 <div className="product_img">
-                  <img src={require(`../../../../server/images/${e.product_img}`)} alt="productitem" />
+                  <img
+                    src={require(`../../../../images/${e.product_img}`)}
+                    alt="productitem"
+                  />
                 </div>
                 <p className="products_name">{e.product_name}</p>
                 <p className="products_offer">{e.product_category}</p>

@@ -9,17 +9,18 @@ import { connect } from "react-redux";
 import { useParams } from "react-router-dom";
 
 const BuyNow = (props) => {
-  let p = useParams();
-  let Id = p.id.toString();
-  useEffect(() => {
-    console.log(Id);
-  }, []);
+  // let { p } = useParams();
+  // // console.log(p);
+  // let Id = p.id.toString();
+  // useEffect(() => {
+  //   console.log(Id);
+  // }, []);
 
-  let product = props.products
-    ? props.products.products.filter((product) => {
-        return product._id === Id;
-      })
-    : null;
+  // let product = props.products
+  //   ? props.products.products.filter((product) => {
+  //       return product._id === Id;
+  //     })
+  //   : null;
   return (
     <div className="buynow_section">
       <div className="buynow_container">
@@ -29,9 +30,9 @@ const BuyNow = (props) => {
           <span className="leftbuyprice">price</span>
           <Divider />
 
-          <div className="item_containert">
+          {/* <div className="item_containert">
             <img
-              src={require(`../../../../server/images/${product.product_img}`)}
+              src={require(`../../../../images/${product.product_img}`)}
               alt="imgitem"
             />
             <div className="item_details">
@@ -45,7 +46,7 @@ const BuyNow = (props) => {
               </div>
             </div>
             <h3 className="item_price">{product.product_mrp}</h3>
-          </div>
+          </div> */}
           <Divider />
           <Subtotal />
         </div>

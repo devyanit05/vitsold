@@ -7,7 +7,7 @@ const ProductCard = (props) => {
   return (
     <div className="card card_main">
       <img
-        src={require(`../../../../server/images/${product.product_img}`)}
+        src={require(`../../../../images/${product.product_img}`)}
         className="card-img-top"
         alt="..."
       />
@@ -16,7 +16,7 @@ const ProductCard = (props) => {
         <button className="btn btn_details">
           <Link
             className="linkk"
-            to={`/getproductsone/${product._id}`}
+            to={`/product/${product._id}`}
             style={{ color: "black" }}
           >
             View Details
