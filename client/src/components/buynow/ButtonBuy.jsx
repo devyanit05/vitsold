@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./buynow.css";
 import emailjs from "emailjs-com";
+import {useNavigate} from "react-router-dom"
 
 const templateParams = {
   to_email: "ashhar374@gmail.com",
@@ -13,6 +14,7 @@ const templateParams = {
 };
 
 const ButtonBuy = (props) => {
+  const nav = useNavigate()
   const product = props.product
   const user = props.user
   const [template, settemplate] = useState({})
@@ -51,11 +53,15 @@ const ButtonBuy = (props) => {
         (response) => {
           console.log("SUCCESS!", response.status, response.text);
           console.log(templateParams);
+          alert("continue to all products")
+          nav('/all-products')
         },
         (err) => {
           console.log("FAILED...", err);
         }
       );
+
+      
   };
 
   return (
