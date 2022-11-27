@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./buynow.css";
 import emailjs from "emailjs-com";
 
@@ -12,7 +12,12 @@ const templateParams = {
   MRP: "500",
 };
 
-const ButtonBuy = () => {
+const ButtonBuy = (props) => {
+
+  useEffect(() => {
+    console.log(props)
+  }, [])
+  
   const [active, setActive] = useState(false);
   const [buttonText, setButtonText] = useState("Proceed to Buy");
 
