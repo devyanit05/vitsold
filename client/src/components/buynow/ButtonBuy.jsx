@@ -3,7 +3,7 @@ import "./buynow.css";
 import emailjs from "emailjs-com";
 
 const templateParams = {
-  to_email: "thokaldevyani1006@gmail.com",
+  to_email: "ashhar374@gmail.com",
   from_email: "thokaldevyani123@gmail.com",
   to_name: "Seller",
   from_name: "Buyer",
