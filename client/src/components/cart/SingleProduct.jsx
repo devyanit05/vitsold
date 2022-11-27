@@ -28,7 +28,7 @@ const Cart = (props) => {
 
           <div className="cart_btn">
             <button className="cart_btn1">Add to Cart</button>
-            <ButtonBuy product={product} user={props.auth.user}
+            <ButtonBuy product={product[0]} user={props.auth.user}
               style={{ backgroundColor: "#FFA41C", fontSize: "14px" }}
             />
           </div>
