@@ -16,20 +16,6 @@ const Cart = (props) => {
     // eslint-disable-next-line
   }, [])
   
-<<<<<<< HEAD
-=======
-  const params = useParams()
-  const id = params.id.toString()
-  let product = props.products.products.filter((product) => {
-    return product._id === id
-  })
-  useEffect(() => {
-    // console.log(id)
-    // console.log(product)
-    // eslint-disable-next-line
-  }, [])
-  
->>>>>>> 15d8d1041e2241bb1a74eb39462ad23b89d89279
   return (
     <div className="cart_section">
       <div className="cart_container">
@@ -82,13 +68,6 @@ const Cart = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return{
-    products : state.products
-  }
-}
-
-export default connect(mapStateToProps)(Cart);
 const mapStateToProps = (state) => {
   return{
     products : state.products
