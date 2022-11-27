@@ -6,40 +6,6 @@ import { connect } from "react-redux";
 import { useParams } from "react-router-dom";
 
 const Cart = (props) => {
-  // const { id } = useParams();
-  // const [productData, setProductData] = useState("");
-
-  // const getProductData = async () => {
-  //   const res = await fetch(`/product/${id}`, {
-  //     method: "GET",
-  //     headers: {
-  //       Accept: "application/json",
-  //       "Content-Type": "application/json",
-  //     },
-  //     credentials: "include",
-  //   });
-
-  //   const data = await res.json();
-  //   console.log(data);
-
-  //   if (res.status !== 201) {
-  //     alert("no data available");
-  //   } else {
-  //     // console.log("ind mila hain");
-  //     setProductData(data);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   setTimeout(getProductData, 1000);
-  // }, [id]);
-
-  // console.log(p);
-  // let Id = id.id.toString();
-  // useEffect(() => {
-  //   console.log(Id);
-  // }, []);
-
   return (
     <div className="cart_section">
       <div className="cart_container">
