@@ -15,7 +15,7 @@ const Navbar = () => {
           <div className="navlogo">
             <h1>
               <NavLink className="linkk" to="/" style={{ color: "white" }}>
-                VitSolds
+                SellSoldered
               </NavLink>
             </h1>
             {/* <img src={logo} alt="" /> */}

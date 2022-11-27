@@ -5,7 +5,6 @@
 .all_cards {
     display: flex;
     flex-direction: row;
-
 }
 
 .single_card {

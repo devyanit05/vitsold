@@ -8,18 +8,19 @@ import ButtonBuy from "./ButtonBuy";
 import { connect } from "react-redux";
 import { useParams } from "react-router-dom";
 
-
 const BuyNow = (props) => {
+  // let { p } = useParams();
+  // // console.log(p);
+  // let Id = p.id.toString();
+  // useEffect(() => {
+  //   console.log(Id);
+  // }, []);
 
-  let p = useParams()
-  let Id = p.id.toString()
-  useEffect(() => {
-    console.log(Id)
-  }, [])
-  
-  let product = props.products ? props.products.products.filter((product) => {
-    return product._id === Id;
-  }):null
+  // let product = props.products
+  //   ? props.products.products.filter((product) => {
+  //       return product._id === Id;
+  //     })
+  //   : null;
   return (
     <div className="buynow_section">
       <div className="buynow_container">
@@ -29,15 +30,15 @@ const BuyNow = (props) => {
           <span className="leftbuyprice">price</span>
           <Divider />
 
-          <div className="item_containert">
+          {/* <div className="item_containert">
             <img
-              src={require(`../../../../server/images/${product.product_img}`)}
+              src={require(`../../../../images/${product.product_img}`)}
               alt="imgitem"
             />
             <div className="item_details">
-              <h3>Long Title of Product fulll...</h3>
+              <h3>{product.product_name}</h3>
 
-              <h3>Category of product</h3>
+              <h3>{product.product_category}</h3>
               <h3 className="differentprice">{product.product_price}</h3>
               <Option />
               <div style={{ textAlign: "end" }}>
@@ -45,7 +46,7 @@ const BuyNow = (props) => {
               </div>
             </div>
             <h3 className="item_price">{product.product_mrp}</h3>
-          </div>
+          </div> */}
           <Divider />
           <Subtotal />
         </div>
@@ -56,9 +57,9 @@ const BuyNow = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  return{
-    products: state.products
-  }
-}
+  return {
+    products: state.products,
+  };
+};
 
-export default connect(mapStateToProps)(BuyNow)
+export default connect(mapStateToProps)(BuyNow);
