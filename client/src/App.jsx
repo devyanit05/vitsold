@@ -12,6 +12,7 @@ import Help from "./components/help/Help";
 import SellProducts from "./components/sell/SellProducts";
 import AllProducts from "./components/displayCat/AllProducts";
 import Electronics from "./components/displayCat/Electronics";
+import AllResults from "./components/search/allResults";
 
 import "./App.css";
 
@@ -22,6 +23,7 @@ function App() {
       <CatNav />
       <Routes>
         <Route exact path="/" element={<Main />} />
+        <Route exact path="/search" element={<AllResults />} />
 
         <Route exact path="/product/:id" element={<SingleProduct />} />
         <Route exact path="/cart" element={<Cart />} />

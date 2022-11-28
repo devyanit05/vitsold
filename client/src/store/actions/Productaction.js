@@ -14,7 +14,7 @@ export const getProducts = () => {
         console.log(json);
         if (!json.error) {
             dispatch({
-                type: 'PRODUCTS',
+                type: 'PRODUCT_FETCHED',
                 products: json,
             })
         }
@@ -25,5 +25,28 @@ export const getProducts = () => {
                 error: json.error
             })
         }
+    }
+}
+
+
+export const searchProduct = (creds, token) => {
+    return async (dispatch) => {
+        const response = await fetch(
+            "http://localhost:5005/search",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "auth-token": token
+                },
+                body: JSON.stringify(creds)
+            }
+        );
+        const json = await response.json();
+        console.log(json);
+        dispatch({
+            type: 'FETCH_SEARCH',
+            searchProduct: json,
+        })
     }
 }

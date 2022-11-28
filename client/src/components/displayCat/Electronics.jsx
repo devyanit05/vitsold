@@ -16,9 +16,9 @@ const Electronics = (props) => {
     : null;
 
   useEffect(() => {
-    console.log("Before: ", props);
-    console.log(params.cat.toString());
-    console.log("After: ", props);
+    // console.log("Before: ", props);
+    // console.log(params.cat.toString());
+    // console.log("After: ", props);
   }, []);
 
   return (

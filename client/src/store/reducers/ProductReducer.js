@@ -5,10 +5,15 @@ const initState = {
 
 const productsReducer = (state = initState, action) => {
     switch (action.type) {
-        case 'PRODUCTS':
+        case 'PRODUCT_FETCHED':
             return {
                 ...state,
                 products: action.products
+            }
+        case 'FETCH_SEARCH':
+            return {
+                ...state,
+                searchProduct: action.searchProduct
             }
 
         default: return state

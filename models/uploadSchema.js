@@ -58,6 +58,7 @@ const uploadSchema = new Schema({
 
 });
 
-const Upload = mongoose.model('upload', uploadSchema);
+uploadSchema.index({ product_name: "text", product_category: "text", product_description: "text" });
 
+const Upload = mongoose.model('upload', uploadSchema);
 module.exports = Upload;

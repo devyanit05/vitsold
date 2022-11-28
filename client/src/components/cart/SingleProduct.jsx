@@ -28,9 +28,7 @@ const Cart = (props) => {
 
           <div className="cart_btn">
             <button className="cart_btn1">Add to Cart</button>
-            <ButtonBuy
-              style={{ backgroundColor: "#FFA41C", fontSize: "14px" }}
-            />
+            <ButtonBuy />
           </div>
         </div>
         <div className="right_cart">

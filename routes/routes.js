@@ -1,6 +1,5 @@
 const express = require('express');
 const multer = require('multer');
-const { v4: uuidv4 } = require('uuid');
 let path = require('path');
 const storage = require('../middleware/multer');
 
@@ -12,9 +11,9 @@ const Upload = require('../models/uploadSchema')
 
 
 const DataController = require('../controller/dataController')
-// const UploadController = require('../controller/uploadController')
 const UploadController = require('../controller/uploadController')
 const userControl = require('../controller/userController')
+const searchControl = require('../controller/searchController')
 
 
 const { FetchUser } = require('../middleware/FetchUser')
@@ -45,17 +44,10 @@ router.post('/login', userControl.login)
 
 
 // upload new product stuff
-// const fileFilter = (req, file, cb) => {
-//     const allowedFileTypes = ['image/jpeg', 'image/jpg', 'image/png'];
-//     if (allowedFileTypes.includes(file.mimetype)) {
-//         cb(null, true);
-//     } else {
-//         cb(null, false);
-//     }
-// }
-
-// let upload = multer({ storage, fileFilter });
-
 router.route('/uploadproducts').post(store.single('product_img'), UploadController.uploadController);
+
+// search for products
+router.post('/search', searchControl.searchProduct);
+
 
 module.exports = router
