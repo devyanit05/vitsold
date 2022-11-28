@@ -28,7 +28,11 @@ const Cart = (props) => {
 
           <div className="cart_btn">
             <button className="cart_btn1">Add to Cart</button>
-            <ButtonBuy />
+            <ButtonBuy
+              product={product[0]}
+              user={props.auth.user}
+              style={{ backgroundColor: "#FFA41C", fontSize: "14px" }}
+            />
           </div>
         </div>
         <div className="right_cart">
@@ -73,6 +77,7 @@ const Cart = (props) => {
 const mapStateToProps = (state) => {
   return {
     products: state.products,
+    auth: state.auth,
   };
 };
 

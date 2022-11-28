@@ -15,7 +15,12 @@ const productsReducer = (state = initState, action) => {
                 ...state,
                 searchProduct: action.searchProduct
             }
-
+        case "LOGOUT":
+            return {
+                ...state,
+                products: null,
+                error: null,
+            }
         default: return state
     }
 }

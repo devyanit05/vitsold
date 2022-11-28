@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "./Banner";
 import Slide from "./Slide";
-import { Link } from "react-router-dom";
-
 import "./home.css";
+import { connect } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 
-const Main = () => {
+const Main = (props) => {
+  const nav = useNavigate()
+  useEffect(() => {
+    console.log(props)
+    if(!localStorage.getItem('token')){
+      nav('/login')
+    }
+  }, [])
+  
   return (
     <div className="home_section">
       <div className="banner_part">
@@ -31,4 +39,11 @@ const Main = () => {
   );
 };
 
-export default Main;
+
+const mapStateToProps = (state) => {
+  return{
+    auth: state.auth
+  }
+}
+
+export default connect(mapStateToProps)(Main);
