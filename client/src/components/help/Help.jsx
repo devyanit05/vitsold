@@ -23,7 +23,7 @@ const Help = () => {
     <section id="contact" className="contact">
       <h2>Contact Us</h2>
 
-      <div className="container contact__container">
+      <div className="containerr contact__container">
         <form ref={form} onSubmit={sendEmail}>
           <input type="text" name="name" placeholder=" Full Name" required />
           <input type="text" name="email" placeholder="Email" required />
