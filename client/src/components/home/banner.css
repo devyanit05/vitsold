@@ -1,6 +1,7 @@
 .banner_img {
     width: 100vw;
-    height: 280px;
+    height: 100%;
+    margin-bottom: 20px;
 }
 
 .carasousel {

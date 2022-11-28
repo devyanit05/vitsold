@@ -1,14 +1,13 @@
 import React from "react";
 import "./banner.css";
+import Img1 from "./imgs/img_1.png";
+import Img2 from "./imgs/img_2.png";
+import Img3 from "./imgs/img_3.png";
+import Img4 from "./imgs/img_4.png";
 
 import Carousel from "react-material-ui-carousel";
 
-const data = [
-  "https://rukminim1.flixcart.com/flap/1680/280/image/1defb861e409319b.jpg?q=50",
-  " https://rukminim1.flixcart.com/flap/1680/280/image/685712c6cefb3c02.jpg?q=50",
-  "https://rukminim1.flixcart.com/flap/1680/280/image/8d4150cc4f3f967d.jpg?q=50",
-  "https://rukminim1.flixcart.com/flap/1680/280/image/685712c6cefb3c02.jpg?q=50",
-];
+const data = [Img1, Img2, Img3, Img4];
 
 const Banner = () => {
   return (
