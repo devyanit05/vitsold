@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./navbar.css";
+
 import { searchProduct } from "../../store/actions/Productaction";
 // import logo from "../../assets/logo_app.png";
 import SearchIcon from "@mui/icons-material/Search";
