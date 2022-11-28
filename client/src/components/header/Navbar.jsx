@@ -9,6 +9,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import Badge from "@mui/material/Badge";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Avatar from "@mui/material/Avatar";
+import {connect} from 'react-redux';
 
 const Navbar = (props) => {
   const nav = useNavigate();
