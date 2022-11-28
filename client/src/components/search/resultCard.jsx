@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const resultCard = (props) => {
+const ResultCard = (props) => {
+  useEffect(() => {
+    console.log( props.searchProduct)
+  }, [])
+  
   const searchResult = props.searchProduct;
   return (
     <div className="container my-3" style={{ width: "90%" }}>
       <Link
-        to={`/search/${searchResult._id}`}
+        to={`/product/${searchResult._id}`}
         className="text-dark"
         style={{ textDecoration: "none" }}
       >
@@ -36,4 +40,4 @@ const resultCard = (props) => {
   );
 };
 
-export default resultCard;
+export default ResultCard;
