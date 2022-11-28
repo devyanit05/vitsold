@@ -29,7 +29,7 @@ export const getProducts = () => {
 }
 
 
-export const searchProduct = (creds, token) => {
+export const searchProduct = (creds) => {
     return async (dispatch) => {
         const response = await fetch(
             "http://localhost:5005/search",
@@ -37,7 +37,7 @@ export const searchProduct = (creds, token) => {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    "auth-token": token
+                    // "auth-token": token
                 },
                 body: JSON.stringify(creds)
             }
