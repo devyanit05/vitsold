@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./navbar.css";
-import { connect } from "react-redux";
 
 import { searchProduct } from "../../store/actions/Productaction";
 // import logo from "../../assets/logo_app.png";
