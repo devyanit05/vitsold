@@ -12,7 +12,7 @@ const AllProducts = (props) => {
   let resultList = props.searchProduct.searchProduct
     ? props.searchProduct.searchProduct.map((prod) => {
         return (
-          <div key={prod._id} className="container">
+          <div key={prod[0]._id} className="container">
             <ResultCard searchProduct={prod} />
           </div>
         );

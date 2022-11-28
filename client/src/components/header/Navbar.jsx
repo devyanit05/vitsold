@@ -8,7 +8,6 @@ import { NavLink } from "react-router-dom";
 import Badge from "@mui/material/Badge";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Avatar from "@mui/material/Avatar";
-import { connect } from "react-redux";
 import { logout } from "../../store/actions/userAct";
 
 const Navbar = (props) => {
