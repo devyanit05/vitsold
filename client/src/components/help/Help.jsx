@@ -32,6 +32,7 @@ const Help = () => {
             rows="7"
             placeholder="Your Message"
             required
+            className="textttt"
           ></textarea>
           <button type="submit" className="help_btn">
             Send Message
