@@ -1,6 +1,6 @@
 export const uploadProject = (creds) => {
     return async (dispatch) => {
-        const response = await fetch("https://sellsoldered-back.onrender.com/uploadproduct", {
+        const response = await fetch("https://sellsoldered-api.onrender.com/uploadproduct", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

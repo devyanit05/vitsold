@@ -1,6 +1,6 @@
 export const login = (creds) => {
   return async (dispatch) => {
-    const response = await fetch("https://sellsoldered-back.onrender.com/login", {
+    const response = await fetch("https://sellsoldered-api.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export const login = (creds) => {
 
 export const createUser = (creds) => {
   return async (dispatch) => {
-    const response = await fetch("https://sellsoldered-back.onrender.com/signup", {
+    const response = await fetch("https://sellsoldered-api.onrender.com/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

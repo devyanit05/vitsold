@@ -1,7 +1,7 @@
 export const getProducts = () => {
     return async (dispatch) => {
         const response = await fetch(
-            "https://sellsoldered-back.onrender.com/getproducts",
+            "https://sellsoldered-api.onrender.com/getproducts",
             {
                 method: "GET",
                 headers: {
@@ -32,7 +32,7 @@ export const getProducts = () => {
 export const searchProduct = (creds) => {
     return async (dispatch) => {
         const response = await fetch(
-            "https://sellsoldered-back.onrender.com/search",
+            "https://sellsoldered-api.onrender.com/search",
             {
                 method: "POST",
                 headers: {
